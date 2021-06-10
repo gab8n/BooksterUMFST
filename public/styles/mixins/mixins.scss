@@ -1,0 +1,24 @@
+@mixin grid($cols, $margin) {
+    float: left;
+    margin-right: $margin;
+    margin-bottom: $margin;
+    width: ((100% - (($cols - 1) * $margin)) / $cols);
+    &:nth-child(#{$cols}n) {
+        margin-right: 0;
+    }
+}
+
+@mixin borrow-btn {
+    border: 1px solid rgb(148, 147, 147);
+    background: $btn-bg;
+    border-radius: 4px;
+    font-size: 1em;
+    padding: 2%;
+    margin-top: 5%;
+    color: #fcf9f9;
+    cursor: pointer;
+
+    &:hover {
+        background: $btn-hover;
+    }
+}

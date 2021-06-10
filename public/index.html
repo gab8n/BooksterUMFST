@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/homepage.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Bookster</title>
+    <!-- stylepages -->
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/homepage.css" />
+    <link rel="stylesheet" href="styles/navBar.css" />
+    <link rel="stylesheet" href="styles/carousel.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/modal.css" />
+    <link rel="stylesheet" href="styles/logInRegisterModal.css" />
+
+    <!-- stylepages -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyBoBchvBfcZJ4pB6Cnyf_RePaxg3vRZzHk",
+        authDomain: "bookster-endava.firebaseapp.com",
+        projectId: "bookster-endava",
+        storageBucket: "bookster-endava.appspot.com",
+        messagingSenderId: "116810068550",
+        appId: "1:116810068550:web:212c8cc3a158fc24005047",
+        measurementId: "G-NFXMTQG1RD",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+
+    <header class="header">
+      <div class="menu">
+        <div class="mobile-only">
+          <div class="logo">
+            <i class="fas fa-atlas fa-3x"></i>
+            <a href="index.html">Bookster</a>
+          </div>
+
+          <div class="burger-menu">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+          </div>
+        </div>
+
+        <nav class="nav-bar hidden-nav">
+          <ul>
+            <li><a href="bookCollection.html">Books</a></li>
+            <li><a href="aboutUs.html">About</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="signed-in" hidden="true">
+              <div class="user-icon"></div>
+              <button class="sign-out-btn">Sign out</button>
+            </li>
+            <li class="signed-out">
+              <a class="login-button">Login</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      
+      <!-- end-menu -->
+      <div class="bottom-side-header">
+        <div class="header-title-button-container">
+          <h1>THE BEST WEBSITE FOR BORROWING BOOKS</h1>
+          <a href="bookCollection.html">Borrow Now</a>
+        </div>
+        <img src="assets/header.svg" />
+      </div>
+    </header>
+    <!-- Header -->
+
+    <main class="main-container">
+      <!-- Road to knowledge -->
+
+      <h2 class="section-title">Road To knowledge</h2>
+
+      <article class="road-to-knowledge-background">
+        <div class="road-to-knowledge-container">
+          <section class="knowledge-item">
+            <img src="./assets/give_book.svg" />
+            <p class="knowledge-text">
+              See what books your friends are reading.
+              Track the books you're reading, have read, and want to read. <br>
+              Check out your personalized book sugestions.  
+              Enjoy a great lecture in a rainy summer afternoon!
+            </p>
+          </section>
+          <section class="knowledge-item">
+            <img src="./assets/bookshelf.svg" />
+            <p class="knowledge-text">
+              You’re in the right place. Tell us what titles or genres you’ve 
+              enjoyed in the past, and we’ll give you surprisingly insightful 
+              recommendations. 
+              Chances are your friends are discussing their favorite 
+              (and least favorite) books on Bookster.
+            </p>
+          </section>
+          <section class="knowledge-item">
+            <img src="./assets/reading_time.svg" />
+            <p class="knowledge-text">
+              You can create "bookshelves" to organize what you've read (or want to read). 
+              You can comment on each other's reviews. You can find your next favorite book. 
+              And on this journey with your friends you can explore new territory, 
+              gather information, and expand your mind. 
+            </p>
+          </section>
+        </div>
+      </article>
+      <!-- Road to knowledge -->
+
+      <!-- Carousel -->
+      <article class="carousel-article">
+        <h3>Best Books</h3>
+        <div class="carousel">
+          <div class = "carousel-box">
+
+          </div>
+          <a class="switch-left slider-button"><</a>
+          <a class="switch-right slider-button">></a>
+
+        </div>
+      </article>
+
+      <!-- Carousel -->
+
+      <!-- Events -->
+      <h2 class="section-title">Events</h2>
+
+      <article class="events">
+        <div class="events-container">
+          <section class="event-item">
+            <div class="event-past-img"></div>
+            <div class="event-title">
+              <h3>Pandemic Poems</h3>
+            </div>
+            <div class="event-desc">
+              <p>
+                <b>Monday, April 26 6:30pm - 7:30pm</b> <br>
+                We're meeting online: same time, virtual place. 
+              </p>
+            </div>
+          </section>
+         
+          <section class="event-item">
+            <div class="event-up-img"></div>
+            <div class="event-title">
+              <h3>Delivering Happiness</h3>
+            </div>
+            <div class="event-desc">
+              <p>
+                <b>Friday, April 30 6:00pm - 8:30pm</b> <br>
+                About passion, vision and goals. Make your customers happy.
+              </p>
+            </div>
+          </section>
+        </div>
+      </article>
+      <!-- Events -->
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>Copyright@baNaNa</p>
+
+      <div class="social-media-links">
+        <a href="#!"><i class="fab fa-facebook-square fa-2x fa-cog"></i></a>
+        <a href="#!"><i class="fab fa-instagram fa-2x fa-cog"></i></a>
+        <a href="#!"><i class="fab fa-linkedin fa-2x fa-cog"></i></a>
+      </div>
+    </footer>
+    <!-- Footer -->
+
+    <script src="script/modalLogin.js"></script>
+    <script src="script/modalOpenClose.js"></script>
+    <script src="./script/auth.js"></script>
+    <!-- <script src="./script/booksContent.js"></script> -->
+
+      <script src="./script/responsiveActions.js"></script>
+    <script src="./script/carousel.js"></script>
+  </body>
+</html>
