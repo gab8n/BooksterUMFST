@@ -1,0 +1,127 @@
+.add-book-modal, .edit-book-modal, .change-profile-picture-modal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.add-book-form, .edit-book-form, .change-profile-picture-form{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0px 20px;
+
+}
+.add-book-modal input,.edit-book-modal input, .change-profile-picture-modal input {
+    width: 100%;
+  padding: 20px 20px;
+  border-radius: 13px;
+  border: none;
+  -webkit-box-shadow: 6px 6px 13px -9px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 6px 6px 13px -9px rgba(0, 0, 0, 0.35);
+  box-shadow: 6px 6px 13px -9px rgba(0, 0, 0, 0.35);
+  outline: none;
+  font-size: 100%;
+  font-weight: bold;
+  margin-bottom: 2vh;
+}
+.add-book-modal textarea, .edit-book-modal textarea{
+    width: 100%;
+    height: 15vh;
+    padding: 20px 20px;
+    border-radius: 13px;
+    border: none;
+    -webkit-box-shadow: 6px 6px 13px -9px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 6px 6px 13px -9px rgba(0, 0, 0, 0.35);
+    box-shadow: 6px 6px 13px -9px rgba(0, 0, 0, 0.35);
+    outline: none;
+    font-size: 100%;
+    font-weight: bold;
+    margin-bottom: 2vh;
+    resize: none;
+}
+.add-book-modal .image-preview-book,  .edit-book-modal .image-preview-book {
+    max-width:150px;
+    min-width: 150px;
+    min-height: 210px;
+    max-height: 210px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+}
+.image-preview-profile-picture{
+    max-width:200px;
+    min-width: 200px;
+    min-height: 200px;
+    max-height: 200px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    border-radius: 50%;
+
+}
+.image-preview-upload-container{
+    width: 100% ;
+    display: flex;
+    justify-content: space-evenly;
+}
+.image-preview-upload-container input{
+    display: none;
+}
+.upload-image-container{
+    border-radius: 12px;
+    font-weight: bold;
+    background-color: #303030;
+    color: white;
+    height: 100%;
+    padding: 12px 24px;
+    cursor: pointer;
+    align-self: center;
+    /* margin: 0px auto; */
+}
+.upload-image-container:hover{
+    background-color: #303030da;
+}
+
+.add-book-modal button, .edit-book-modal button, .change-profile-picture-modal button{
+  background-color: #303030;
+  border-radius: 13px;
+  border: none;
+  font-size: 100%;
+  padding: 20px 2vw;
+  width: 100%;
+  color: #e5e5e5;
+  cursor: pointer;
+  outline: none;    
+  margin-bottom: 15px;
+}
+.container-of-two-inputs {
+    display: flex;
+    justify-content: space-between;
+  }
+.container-of-two-inputs input {
+    width: 48.8%;
+}
+.container-of-three-inputs{
+    display: flex;
+    justify-content: space-between; 
+
+}
+.container-of-three-inputs input{
+    width: 35%;
+    
+}
+.container-of-three-inputs input:nth-child(3){
+    width: 26%;
+    
+}
+.add-book-form button:hover {
+    background-color: #303030da;
+}
+
+

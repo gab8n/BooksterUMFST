@@ -1,0 +1,256 @@
+@import '../styles/extends/extends';
+@import '../styles/variables/variables';
+@import './mixins/mixins.scss';
+
+
+main {
+    font-family: "Montserrat";
+    min-height: 85vh;
+}
+
+.book-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 40%;
+}
+
+.book-info {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    border-radius: 8px;
+    margin: 3.5% 0;
+
+
+    .book-img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 25%;
+        
+        img {
+            width:100%;   
+        }
+    }
+    
+    .book-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 50%;
+        margin-left: 2%;
+        padding-right: 3%;
+
+        .book-title {
+            text-align: center;
+            font-size: 2em;
+        }
+
+        .book-author {
+            font-size: 1.3em;
+        }
+
+        .book-category {
+            font-size: 1em;
+        }
+
+        .book-description {
+            text-align: justify;
+        }
+
+        & > * {
+            margin-bottom: 3%;
+        }
+
+        .categ-span {
+            color: rgb(206, 6, 6);
+        }
+
+        .pages-span {
+            color: rgb(94, 22, 228);
+        }
+    }
+
+    .book-borrow {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 20%;
+        margin-left: 2%;
+
+        a {
+            width: fit-content;
+            text-decoration: none;
+            @extend %borrow-btn;
+        }
+    }
+
+    
+}
+
+.comments-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+}
+
+.book-comments {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgb(148, 147, 147);
+    padding-top: 3%;
+    width: 80%;
+
+    &__title {
+        margin-bottom: 3%;
+    }
+}
+
+.comments-form_container {
+    display: flex;
+    
+    .comments-form {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 2;
+        margin: 0 0 3% 2%;
+
+        textarea {
+            border: 2px solid #f3f3f3;
+            box-shadow: inset 0 0 2px #616161;
+            border-radius: 7px;
+            padding: 1%;
+            font-size: 1em;
+            resize: none;
+        }
+
+        .add-comment {
+            max-width: 50%;
+            align-self: flex-end;
+            margin-top: 2%;
+            @extend %borrow-btn;
+            padding: 1%;
+        }
+    }
+}
+
+.hidden-comments-form {
+    display: none;
+}
+
+.comment-avatar {
+    max-width: 8%;
+
+    img {
+        width: 5vw;
+        height: 5vw;
+        border-radius: 50%;
+    }
+}
+
+.comment {
+    display: flex;
+    margin-bottom: 3%;
+
+    .comment-content {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2%;
+        width: 100%;
+        
+        .comment-author {
+            margin-bottom: 2%;
+            font-size: 1em;
+        }
+
+        .remove-comment {
+            color: rgba(250, 72, 72, 0.6);
+            margin-top: 2%;
+            cursor: pointer;
+
+            &:hover {
+                color: rgb(250, 72, 72);
+            }
+        }
+    }
+}
+
+
+
+
+@media (max-width: 480px), (max-width: 800px) {
+
+    .menu {
+        width: 100%;
+        padding: 0 3%;
+    }
+    .book-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 85%;
+        border-radius: 8px;
+        margin: 3.5% 0;
+
+        .book-img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            margin-bottom: 4%;
+            
+            img {
+            width: 100%;   
+            }
+        }
+
+        .book-details {  
+            display: flex;      
+            width: 90%;   
+            text-align: justify;  
+            margin-top: 3%;      
+        }
+
+
+        .book-borrow {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 60%;
+    
+            a {
+                width: fit-content;
+                text-decoration: none;
+                @include borrow-btn;
+            }
+        }    
+    }
+
+    .comments-form {
+        textarea {
+            resize: horizontal;
+        }
+    }
+
+    .comment {
+        margin-bottom: 8%;
+    }
+}
+
+
+    
+// @media (max-width: 480px) {
+//     .add-comment {
+//         width: 50%;
+//     }
+// }
+    
+    
+
+
+
+

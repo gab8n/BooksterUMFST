@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+   />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+   
+
+ </head>
+    <link rel="stylesheet" href="./styles/homepage.css" />
+    <link rel="stylesheet" href="styles/navBar.css" />
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="./styles/bookDetails.css" />
+    <link rel="stylesheet" href="styles/modal.css" />
+    <link rel="stylesheet" href="styles/modalBorrow.css" />
+    <link rel="stylesheet" href="./styles/logInRegisterModal.css"/>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyBoBchvBfcZJ4pB6Cnyf_RePaxg3vRZzHk",
+        authDomain: "bookster-endava.firebaseapp.com",
+        projectId: "bookster-endava",
+        storageBucket: "bookster-endava.appspot.com",
+        messagingSenderId: "116810068550",
+        appId: "1:116810068550:web:212c8cc3a158fc24005047",
+        measurementId: "G-NFXMTQG1RD",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    <title>Book Details</title>
+  </head>
+  <body>
+    <header class="header">
+    <div class="menu">
+        <div class="mobile-only">
+          <div class="logo">
+            <i class="fas fa-atlas fa-3x"></i>
+            <a href="index.html">Bookster</a>
+          </div>
+
+          <div class="burger-menu">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+          </div>
+        </div>
+
+        <nav class="nav-bar hidden-nav">
+          <ul>
+            <li><a href="bookCollection.html">Books</a></li>
+            <li><a href="aboutUs.html">About</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="signed-in" hidden="true">
+              <div class="user-icon"></div>
+              <button class="sign-out-btn">Sign out</button>
+            </li>
+            <li class="signed-out">
+              <a class="login-button">Login</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <article class="book-container">
+        <div class="book-info">
+          <figure class="book-img">
+            <img class="book-cover" src="" alt="book cover" />
+          </figure>
+
+          <section class="book-details">
+            <h1 class="book-title">Book Title</h1>
+            <h2 class="book-author">by: Book Author</h2>
+            <h3 class="book-category">Category</h3>
+            <h4 class="book-pages">Page Count: <span class="pages-span">200</span></h4>
+            <h4>Details:</h4>
+            <p class="book-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+              doloremque saepe non mollitia eos numquam est eum debitis quo
+              provident? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Nihil recusandae qui sequi dicta ipsum omnis consectetur enim
+              officia non ratione. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Odit possimus eveniet aperiam soluta, distinctio
+              ut quidem quasi sed voluptatibus quo esse aliquam culpa numquam nisi
+              quia? Vero sunt corporis aliquid hic quidem officia facere,
+              exercitationem mollitia accusantium accusamus qui molestias
+              asperiores inventore quos rem esse!
+            </p>
+          </section>
+
+        <section class="book-borrow">
+          <a  class="getNowButton">Get Now!</a>
+          <a class="wish-btn"><i class="far fa-heart"></i> Wish List</a>
+        </section>
+      </article>
+
+     
+        <section class="comments-container">
+          <div class="book-comments">
+            <h2 class="book-comments__title">Comments</h2>
+
+            <div class="comments-form_container hidden-comments-form">
+              <figure class="comment-avatar">
+                <img class="img-avatar" src="./assets/commavatar.png" alt="user avatar">
+              </figure>            
+              <div class="comments-form ">
+                <textarea class="comment-input" rows="4" cols="30" placeholder="Please share your experience about this book"></textarea>
+                <button class="add-comment">Add Comment</button>
+              </div>
+            </div>
+
+          </div>
+        </section>
+     
+      </article>
+    </main>
+
+    <footer>
+      <p>Copyright@baNaNa</p>
+      <div class="social-media-links">
+        <a href="#!"><i class="fab fa-facebook-square fa-2x fa-cog"></i></a>
+        <a href="#!"><i class="fab fa-instagram fa-2x fa-cog"></i></a>
+        <a href="#!"><i class="fab fa-linkedin fa-2x fa-cog"></i></a>
+      </div>
+    </footer>
+    <script src="./script/bookDetails.js"></script>
+    <script src="./script/modalLogin.js"></script>
+    <script src="./script/borrowBookModalFormular.js"></script>
+    <script src="./script/modalOpenClose.js"></script>
+    <script src="./script/auth.js"></script>
+    <script src="./script/responsiveActions.js"></script>
+  </body>
+  
+  
+</html>

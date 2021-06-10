@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/navBar.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/about.css" />
+    <link rel="stylesheet" href="styles/modal.css" />
+    <link rel="stylesheet" href="styles/logInRegisterModal.css" />
+    <!-- stylepages -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyBoBchvBfcZJ4pB6Cnyf_RePaxg3vRZzHk",
+        authDomain: "bookster-endava.firebaseapp.com",
+        projectId: "bookster-endava",
+        storageBucket: "bookster-endava.appspot.com",
+        messagingSenderId: "116810068550",
+        appId: "1:116810068550:web:212c8cc3a158fc24005047",
+        measurementId: "G-NFXMTQG1RD",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    <title>About Us</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="menu">
+        <div class="mobile-only">
+          <div class="logo">
+            <i class="fas fa-atlas fa-3x"></i>
+            <a href="index.html">Bookster</a>
+          </div>
+
+          <div class="burger-menu">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+          </div>
+        </div>
+
+        <nav class="nav-bar hidden-nav">
+          <ul>
+            <li><a href="bookCollection.html">Books</a></li>
+            <li><a href="aboutUs.html">About</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="signed-in" hidden="true">
+              <div class="user-icon"></div>
+              <button class="sign-out-btn">Sign out</button>
+            </li>
+            <li class="signed-out">
+              <a class="login-button">Login</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="bottom-side-header">
+        <h2>About Us</h2>
+        <img src="./assets/aboutus.svg" />
+      </div>
+    </header>
+    <!-- Header -->
+
+    <!--About us main-->
+    <main>
+      <section class="about-bookster">
+        <h1>What is Bookster ?</h1>
+        <div class="about-text-bookster">
+          <p>
+            Bookster is the first modern public library in Romania. Since the
+            library opened in 2013, the 77,000 readers have made more than 4
+            million loans. They have free access to over 100,000 books,
+            articles, case studies, ebooks and videos in various fields, from
+            personal and professional development, to hobbies, fiction and
+            children's books, by accessing www.bookster.ro.
+          </p>
+        </div>
+      </section>
+      <section class="team-bookster">
+        <h2>Meet the team</h2>
+        <div class="members-bookster">
+          <div class="member-bookster">
+            <p class="member-name">Gabriel Cotoc</p>
+            <div class="member-1-img"></div>
+            <p class="member-text">
+              Ochii văd inima cere… Am curaj dar n-am putere.
+            </p>
+          </div>
+          <div class="member-bookster">
+            <p class="member-name">Denisz Dandoczi</p>
+            <div class="member-2-img"></div>
+            <p class="member-text">
+              Web development enthusiast and currently a student at the
+              Technical University of Cluj Napoca.<br />
+              Passionate about finance and self help books.
+            </p>
+          </div>
+          <div class="member-bookster">
+            <p class="member-name">Tudor Bucur</p>
+            <div class="member-3-img"></div>
+            <p class="member-text">
+              Working with front end web development technologies. 
+              Enthusiast reader of adventure and police literature.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="testimonials-bookster">
+        <h2>Testimonials</h2>
+        <ul class="testimonials-list">
+          <li class="testimonial-entry">
+            <div class="testimonial-image">
+              <img src="assets/avatar1.jfif" />
+            </div>
+            <div class="testimonial-data-container">
+              <p class="testimonial-name">Benjamin Dover</p>
+              <p class="testimonial-text">
+                I believe that quality reading, as part of people’s education,
+                plays an essential role in the development of the society. That
+                is why I hope that the Bookster smiling lamp will become a
+                friend and inspiration source to as many corporate employees as
+                possible.
+              </p>
+            </div>
+          </li>
+          <li class="testimonial-entry">
+            <div class="testimonial-image">
+              <img src="assets/avatar2.jfif" />
+            </div>
+            <div class="testimonial-data-container">
+              <p class="testimonial-name">Yang Yang</p>
+              <p class="testimonial-text">
+                Enclosed in a circle, the logo has been printed on hundreds of
+                thousands of stickers. Placed on the translucent plastic covers
+                of the books, these stickers have become the distinguishable
+                mark of ”booksters” in offices and elsewhere. Bookster now
+                delivers books and articles to over 30,000 readers from the
+                biggest 200 companies in Romania. That’s about 20% market share
+                in the corporate sector. In many industries, it is already a
+                standard employee benefit.
+              </p>
+            </div>
+          </li>
+          <li class="testimonial-entry">
+            <div class="testimonial-image">
+              <img src="assets/avatar3.jfif" />
+            </div>
+            <div class="testimonial-data-container">
+              <p class="testimonial-name">Arthur Shelby</p>
+              <p class="testimonial-text">
+                In 2016, Bookster had 50,000 books in the library and it reached
+                break-even with 1 million EUR in income. One more reason for
+                their success, apart from the affordability of reading? Not only
+                are their books nicely summarised and recommended by the
+                library’s team, but they’re also matched to the reader’s
+                preferences based on a Netflix-like algorithm.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <!--About us main-->
+
+    <footer>
+      <p>Copyright@baNaNa</p>
+      <div class="social-media-links">
+        <a href="#!"><i class="fab fa-facebook-square fa-2x fa-cog"></i></a>
+        <a href="#!"><i class="fab fa-instagram fa-2x fa-cog"></i></a>
+        <a href="#!"><i class="fab fa-linkedin fa-2x fa-cog"></i></a>
+      </div>
+    </footer>
+    <script src="script/modalLogin.js"></script>
+    <script src="script/modalOpenClose.js"></script>
+    <script src="./script/auth.js"></script>
+    <script src="./script/responsiveActions.js"></script>
+  </body>
+</html>
